@@ -1,0 +1,29 @@
+div.env{
+    border: 1px solid #f7c11a;
+}
+div.env>ul:after{
+    content:"";
+    display:block;
+    clear:both
+}
+div.env>ul>li{
+    width:300px;
+    text-align: center;
+    box-shadow: 0 0 10px #666666;
+    float: left;
+    margin: 10px 2px 20px 12px;
+    border-radius:5px
+}
+div.env>ul>li>a>img{
+    width:286px;
+    height:214px;
+    padding: 7px;
+}
+div.env>ul>li>p{
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    font-size: 14px;
+    color: #333333;
+    margin:5px 0
+}

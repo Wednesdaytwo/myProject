@@ -1,0 +1,30 @@
+body{
+    background: url('../img/img31.jpg') top repeat-x;
+}
+a:hover{
+    text-decoration: none;
+}
+.small{
+    font-size: .8rem;
+}
+section{margin-bottom: 300px}
+div.login-head {
+     width: 100%;
+     height: 208px;
+     background: url("../img/img33.png") repeat-x 50% 100%;
+ }
+div.login-head div:last-child a{
+    color:#6f6f6f;
+    padding:0 12px;
+}
+div.form-content div input#uname{
+    background: url("../img/img34.png") left no-repeat;
+    text-indent: 25px;
+}
+div.form-content div input#upwd{
+    background: url("../img/img35.png") left no-repeat;
+    text-indent: 25px;
+}
+div.form-content div input#btn{
+    padding: 6px 65px;
+}

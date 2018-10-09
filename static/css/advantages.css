@@ -1,0 +1,15 @@
+.adv-txt{
+    width:100%;
+    border:1px solid #f7c11a;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+.adv-txt>div:first-child,.adv-txt>div:nth-child(3){
+    width: 100%;
+    height:50px;
+    line-height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    text-indent: 42px;
+}

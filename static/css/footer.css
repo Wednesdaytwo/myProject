@@ -1,0 +1,46 @@
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6{
+    padding:0;
+    margin:0;
+}
+body{
+    color:#666666;
+    font-size: 16px;
+    font-family: "微软雅黑";
+}
+ul{list-style: none}
+a{text-decoration: none}
+img{vertical-align: middle;}
+.foot{
+    width:1280px;
+    height:180px;
+    margin:0  auto;
+    position:relative;
+}
+div.foot div.foot-line{
+    width:100%;
+    height:10px;
+    background-color:#ff730b;
+    border-radius:5px;
+}
+div.foot div.foot-info{
+   font-size:14px;
+    line-height:28px;
+    position: absolute;
+    top:30px
+}
+div.foot div.gs{
+    position: absolute;
+    right: 400px;
+    bottom:20px;
+}
+div.foot div.wechat{
+    position: absolute;
+    right:120px;
+    bottom:20px;
+}
+div.foot div.wechat-info{
+    position: absolute;
+    right:25px;
+    bottom:28px;
+    line-height: 28px;
+}
