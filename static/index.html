@@ -15,9 +15,7 @@
 
 </head>
 <body>
-<header id="header">
-
-</header>
+<header id="header"></header>
     <div class="container p-0" id="container">
         <!-- 特色服务-->
         <div class="server mt-5 pt-4 mb-4" id="plist">
@@ -96,7 +94,6 @@
                     <li class="" v-for="p in authority"><a :href="p.url"><img :src="p.pic" alt=""/></a></li>
                 </ul>
             </div>
-            <script type="text/javascript">ScrollLeft('de',20)</script>
         </div>
         <!--环境介绍-->
         <div class="row environment">
@@ -111,13 +108,13 @@
                 <img src="img/hj_b3.jpg" alt=""/>
             </div>
             <div class="w-100 mt-3" id="environment">
-                <img src="img/hover-prev.png" alt="" id="prev" class="disabled float-left" @click="changePic()"/>
+                <img src="img/hover-prev.png" alt="" id="prev" class="disabled float-left"/>
                 <div class="d-inline-block">
                     <ul class="list-unstyled d-flex" id="elist">
                         <li v-for="p in environment"><a :href="p.url"><img :src="p.pic" alt=""/></a><p class="text-center small" v-text="p.title"></p></li>
                     </ul>
                 </div>
-                <img src="img/hover-next.png" alt="" id="next" class="float-right" @click="changePic()"/>
+                <img src="img/hover-next.png" alt="" id="next" class="float-right"/>
             </div>
         </div>
         <!--友情链接 -->
@@ -131,7 +128,6 @@
         </div>
     </div>
 <footer id="footer"></footer>
-<script src="js/ajax.js"></script>
 <script src="js/index.js"></script>
 <script src="js/header.js"></script>
 <script src="js/footer.js"></script>

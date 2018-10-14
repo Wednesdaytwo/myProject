@@ -16,18 +16,18 @@
         <header>
             <div class="login-head text-center">
                 <div class=" pb-5">
-                    <a href="#"><img src="../img/img32.png" alt=""/></a>
+                    <a href="#"><img src="./img/img32.png" alt=""/></a>
                 </div>
                 <div>
-                    <a href="login.html">登录</a>
+                    <a href="login.html" class="active">登录</a>
                     <a href="register.html">注册</a>
-                    <a href="../index.html">返回首页</a>
+                    <a href="index.html">返回首页</a>
                 </div>
             </div>
         </header>
         <section>
             <div class="form-content form-group pt-5">
-                <form action="#" method="post" class="w-25 m-auto">
+                <form class="w-25 m-auto">
                     <div class="form-group">
                         <input type="text" class="form-control" name="uname" id="uname" placeholder="请输入用户名"/>
                     </div>
@@ -35,7 +35,7 @@
                         <input type="password" class="form-control" name="upwd" id="upwd" placeholder="请输入密码"/>
                     </div>
                     <div class="form-check text-center">
-                        <input type="submit" class="btn btn-primary" id="btn" value="登录"/>
+                        <input type="button" class="btn btn-primary" id="login-btn" value="登录"/>
                     </div>
                 </form>
             </div>
@@ -47,5 +47,6 @@
         <footer id="footer"></footer>
     </div>
     <script src="js/footer.js"></script>
+    <script src="js/register.js"></script>
 </body>
 </html>

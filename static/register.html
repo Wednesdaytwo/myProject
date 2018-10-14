@@ -4,46 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
     <title>Personal Project</title>
-    <link rel="shortcut icon" href="../img/index.ico" />
-    <link rel="stylesheet" href="../css/bootstrap.css"/>
-    <link rel="stylesheet" href="../css/register.css"/>
-    <script src="../js/jquery.min.js"></script>
-    <script src="../js/popper.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-
+    <link rel="shortcut icon" href="./img/index.ico" />
+    <link rel="stylesheet" href="./css/bootstrap.css"/>
+    <link rel="stylesheet" href="./css/register.css"/>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
 </head>
 <body>
 <div class="container">
     <header>
         <div class="register-head text-center">
             <div class=" pb-5">
-                <a href="#"><img src="../img/img32.png" alt=""/></a>
+                <a href="#"><img src="./img/img32.png" alt=""/></a>
             </div>
             <div>
                 <a href="login.html">登录</a>
-                <a href="register.html">注册</a>
-                <a href="../index.html">返回首页</a>
+                <a href="register.html" class="active">注册</a>
+                <a href="./index.html">返回首页</a>
             </div>
         </div>
     </header>
     <section>
         <div class="form-content">
-            <form action="" method="post" class="w-50 m-auto pt-5">
+            <form class="w-50 m-auto pt-5" id="register">
                 <div class="form-group">
-                    <input type="text" name="uname" id="uname" placeholder="请输入用户名"/><span>长度6-8个字符，格式为字母和数字的组合。</span>
+                    <input type="text" name="uname" id="uname"  placeholder="请输入用户名"/><span id="n_txt">长度6-8个字符，格式为字母和数字的组合。</span>
                 </div>
                 <div class="form-group">
-                    <input type="password" name="upwd1" id="upwd1" placeholder="请输入密码"/><span>至少包含字母和数字，6-15位字符，区分大小写。</span>
+                    <input type="password" name="upwd1" id="upwd1"  placeholder="请输入密码"/><span id="p1_txt">至少包含字母和数字，6-15位字符，区分大小写。</span>
                 </div>
 
                 <div class="form-group">
-                    <input type="password" name="upwd2" id="upwd2" placeholder="请再次输入密码"/><span>至少包含字母和数字，6-15位字符，区分大小写。</span>
+                    <input type="password" name="upwd2" id="upwd2"  placeholder="请再次输入密码"/><span id="p2_txt">至少包含字母和数字，6-15位字符，区分大小写。</span>
                 </div>
                 <div class="form-group">
-                    <input type="text" name="uemail" id="uemail" placeholder="请输入邮箱"/>
+                    <input type="text" name="uemail" id="uemail"  placeholder="请输入邮箱"/><span id="e_txt"></span>
                 </div>
                 <div class="form-group">
-                    <input type="text" name="phone" id="phone" placeholder="请输入手机号"/><span>一个手机只能认证一个账号</span>
+                    <input type="text" name="phone" id="phone"  placeholder="请输入手机号"/><span>一个手机只能认证一个账号</span>
                 </div>
                 <div class="form-group">
                     <input type="text" name="code" id="code" value="952710"/><input type="button" value="获取验证码" class="code-btn"/><span>请填写验证码</span>
@@ -60,7 +59,6 @@
     </section>
     <footer id="footer"></footer>
 </div>
-
 <script src="js/register.js"></script>
 <script src="js/footer.js"></script>
 </body>

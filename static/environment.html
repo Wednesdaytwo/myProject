@@ -10,24 +10,29 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/vue.js"></script>
 </head>
 <body>
-<header id="header">
-</header>
-<div class="container p-0">
+<header id="header"></header>
+<div class="container p-0" id="container">
+
     <div class="env w-100 p-2 mb-3 mt-3">
-        <ul class="list-unstyled" id="picList">
-            <!--<li>-->
-                <!--<a href="#"><img src="img/hj6.jpg" alt=""/></a>-->
-                <!--<p>周边环境</p>-->
-            <!--</li>-->
+        <div class="intro-title">
+            <span>您当前的位置：<a href="#">首页</a>><a href="#">教学环境</a>><a href="#">教学环境</a>></span>
+            教学环境
+        </div>
+        <ul class="list-unstyled" >
+            <li v-for="item in environment">
+                <a :href="item.url"><img :src="item.pic" alt=""/></a>
+                <p v-html="item.title"></p>
+            </li>
         </ul>
     </div>
 </div>
 <footer id="footer"></footer>
 <script src="js/ajax.js"></script>
-<script src="js/index.js"></script>
 <script src="js/header.js"></script>
 <script src="js/footer.js"></script>
+<script src="js/index.js"></script>
 </body>
 </html>

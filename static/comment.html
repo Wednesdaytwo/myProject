@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/comment.css"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/vue.js"></script>
+    <title></title>
+</head>
+<body>
+<header id="header"></header>
+    <div class="container mt-3">
+        <div class="reviewTheme row mb-4">
+            <div class="col-md-3">
+                <img src="img/hj2.jpg" alt="" width="296" height="222"/>
+            </div>
+            <div class="col-md-9">
+                <ul class="list-unstyled ">
+                    <li class="reviewThemeTxt_A p-2"><a href="index.html">上善佳餐饮管理有限公司</a></li>
+                    <li class="reviewThemeTxt_B p-2">
+                        <span>
+                            <font>★</font>
+                            <font>★</font>
+                            <font>★</font>
+                            <font>★</font>
+                            <font>★</font>
+                        </span>
+                        <span class="fl">27条评论   |  服务：4  |  师资: 4  |  环境：4 |  口味：4</span>
+                    </li>
+                    <li class="reviewThemeTxt_C p-2">
+                        <p><span><strong>&nbsp;&nbsp;&nbsp;&nbsp;世界的美食&nbsp;&nbsp;中国的上善佳</strong></span></p>
+                        <p><span>真实，有效，实体店培训学习，亲身体验创业式培训。</span></p>
+                        <p><span>无需加盟费，完全获取成熟经验和全套核心技术！</span></p>
+                    </li>
+                    <li class="reviewThemeTxt_D p-2">
+                        <a href="#"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="ReviewTxt" id="ReviewTxt">
+            <div class="ReviewTxt_Top">
+                全部点评 <span>(27)</span>
+            </div>
+            <div class="row ReviewTxt_Bot" v-for="item in list">
+                <div class="col-1 p-0">
+                    <div class="Img"><a href="#"><img :src="item.avatar" alt="" width="100"/></a></div>
+                </div>
+                <div class="col-11 m-0">
+                    <div class="ReviewTxt_Bot_B">
+                        <div class="ReviewTxt_Bot_B_Name">{{item.uname}}</div>
+                        <div class="ReviewTxt_Bot_B_Pingfen">
+                         <span class="fl ReviewTxt_Bot_PingFen_A">
+                            <font>★</font>
+                            <font>★</font>
+                            <font>★</font>
+                            <font>★</font>
+                            <font>★</font>
+                        </span>
+                            <span class="fl">服务：{{item.server}} | 师资: {{item.teachers}} | 环境：{{item.environment}} | 口味：{{item.taste}}</span>
+                            <span class="fr float-right">{{item.inputime}}&nbsp;&nbsp;|&nbsp;&nbsp;<font><a href="javascript:void(0);" style="color:#f08519;">踩（0）</a></font>&nbsp;&nbsp;<a href="javascript:void(0);"  class="ReviewTxt_Bot_B_PingFenfra dianzan">赞（<font id="dz37">5</font>）</a></span>
+                        </div>
+                        <div class="ReviewTxt_Bot_B_Txt">
+                            <span>{{item.content}}</span>
+                        </div>
+                        <div class="ReviewTxt_Bot_B_uli">
+                            <ul class="list-unstyled d-flex justify-content-between">
+                                <li><img src="img/comment/20170508040625867.jpg" alt=""/></li>
+                                <li><img src="img/comment/20170508040646165.jpg" alt=""/></li>
+                                <li><img src="img/comment/20170508040705936.jpg" alt=""/></li>
+                                <li><img src="img/comment/20170508040731510.jpg" alt=""/></li>
+                                <li><img src="img/comment/20170508040756531.jpg" alt=""/></li>
+                                <li><img src="img/comment/20170508040828101.jpg" alt=""/></li>
+                                <li><img src="img/comment/20170508040904313.jpg" alt=""/></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<footer id="footer"></footer>
+<script src="js/header.js"></script>
+<script src="js/footer.js"></script>
+<script src="js/comment.js"></script>
+</body>
+</html>

@@ -8,6 +8,7 @@ a:hover{
     font-size: .8rem;
 }
 section{margin-bottom: 300px}
+
 div.login-head {
      width: 100%;
      height: 208px;
@@ -16,6 +17,9 @@ div.login-head {
 div.login-head div:last-child a{
     color:#6f6f6f;
     padding:0 12px;
+}
+div.login-head div:last-child a.active{
+    color:red
 }
 div.form-content div input#uname{
     background: url("../img/img34.png") left no-repeat;

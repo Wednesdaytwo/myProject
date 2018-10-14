@@ -4,14 +4,14 @@ $(function(){
         el:"#container",
         data:function(){
             return {
-                server:[],
-                pno:"",
-                pageCount:"",
+                server:[],//特色服务
+                pno:"",//页码
+                pageCount:"",//有多少页
                 liClass:"active",
-                student:[],
-                authority:[],
-                environment:[],
-                link:[],
+                student:[],//学员风采
+                authority:[],//权威机构
+                environment:[],//环境介绍
+                link:[],//友情链接
                 cur:""//当前页码
             }
         },
@@ -19,6 +19,7 @@ $(function(){
             this.getdata();
         },
         methods:{
+            //分页函数
             getdata(pno=0){
                 $.ajax({
                     url: "http://localhost:8000/index/",
@@ -37,61 +38,33 @@ $(function(){
                         vm.cur=parseInt(pno);
                     }
                 })
-            },
-            changePic(){
-                console.log("success")
             }
         }
     })
-        var $prev = $("#prev");
-        var $next = $("#next");
-        var $ul=$prev.next().children();
-        //var ul=document.querySelector("#environment>div>ul");
-        //ul.style.width=`${251*8}px`;
-        var moved=0,LIWIDTH=251;
-        $prev.click(function(){
-            $prev=$(this)
-            if(!$prev.is(".disabled")){
-                moved--;
-                $ul.css("marginLeft",-LIWIDTH*moved);
-                $next.removeClass("disabled");
-                if(moved==0)
-                    $prev.addClass("disabled")
-            }
-        })
-        $next.click(function(){
-            var $next=$(this);
-            if(!$next.is(".disabled")){
-                moved++;
-                $ul.css("marginLeft",-LIWIDTH*moved);
-                $prev.removeClass("disabled");
-                if($ul.children().length-5==moved){
-                    $next.addClass("disabled");
-                }
-            }
-        })
-        //var $ul =  $("#qwjg").children("div:last-child").children()
-        //var moved=0,LIWIDTH=143;
-        //setInterval(function(){
-        //    moved++
-        //    $ul.css("marginLeft",-LIWIDTH*moved);
-        //},1000)
-    function ScrollLeft(de,de1){
-
-        var speed=20;
-        var tab=document.getElementById("de");
-        var tab1=document.getElementById("de1");
-        var tab2=document.getElementById("de2");
-        tab2.innerHTML=tab1.innerHTML;
-        function Marquee(){
-            if(tab2.offsetWidth-tab.scrollLeft<=0)
-                tab.scrollLeft-=tab1.offsetWidth
-            else{
-                tab.scrollLeft++;
+    //环境介绍切换下一张 jQuery实现
+    var $prev = $("#prev");//上一页
+    var $next = $("#next");//下一页
+    var $ul=$prev.next().children();
+    var moved=0,LIWIDTH=251;
+    $prev.click(function(){
+        $prev=$(this)
+        if(!$prev.is(".disabled")){
+            moved--;
+            $ul.css("marginLeft",-LIWIDTH*moved);
+            $next.removeClass("disabled");
+            if(moved==0)
+                $prev.addClass("disabled")
+        }
+    })
+    $next.click(function(){
+        var $next=$(this);
+        if(!$next.is(".disabled")){
+            moved++;
+            $ul.css("marginLeft",-LIWIDTH*moved);
+            $prev.removeClass("disabled");
+            if($ul.children().length-5==moved){
+                $next.addClass("disabled");
             }
         }
-        var MyMar=setInterval(Marquee,speed);
-        tab.onmouseover=function() {clearInterval(MyMar)};
-        tab.onmouseout=function() {MyMar=setInterval(Marquee,speed)};
-    }
+    })
 })
