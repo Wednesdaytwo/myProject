@@ -42,13 +42,31 @@ var router = express.Router();
     router.post("/login",(req,res)=>{
         var $uname = req.body.uname;
         var $upwd = md5(req.body.upwd);
-        var sql="SELECT COUNT(uid) as num FROM `zw_user` WHERE `uname` = ? AND `upwd` = ?";
-        pool.query(sql,[$uname,$upwd],(err,result)=>{
-            if(err) throw err
-            if(result[0].num>0)
-                res.send({code:1,msg:"登录成功"})
-            else
-                res.send({code:0,msg:"登录失败,用户名或者密码错误"})
-        })
+        var obj={};
+        (async function(){
+            var sql="SELECT COUNT(uid) as num,uid FROM `zw_user` WHERE `uname` = ? AND `upwd` = ?";
+            await new Promise(function (open) {
+                pool.query(sql,[$uname,$upwd],(err,result)=>{
+                    if(err) throw err
+                    if(result[0].num==0){
+                        res.send({code:0,msg:"登录失败,用户名或者密码错误"});
+                        return
+                    }else{
+                        obj.uid=result[0].uid
+                    }
+                    open()    //res.send({code:1,uid:result[0].uid,msg:"登录成功"})
+                })
+
+            })
+            var sql = "SELECT `uid`, `uname` FROM `zw_user` WHERE `uid` = ?";
+            await new Promise(function (open) {
+                pool.query(sql,[obj.uid],(err,result)=>{
+                    if(err) throw err
+                    obj.data = result
+                    open()
+                })
+            })
+            res.send({code:1,msg:"登录成功",obj})
+        })()
     })
 module.exports=router;

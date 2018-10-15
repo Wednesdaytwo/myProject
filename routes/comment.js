@@ -19,6 +19,14 @@ router.get("/list",(req,res)=>{
                 open()
             })
         })
+        var sql="SELECT cid, img_data FROM `zw_comment_pic`";
+        await new Promise(function (open) {
+            pool.query(sql,[],(err,result)=>{
+                if(err) throw err
+                 obj.img_data=result;
+                open()
+            })
+        })
         res.send(obj)
     })()
 })

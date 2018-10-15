@@ -68,13 +68,7 @@
                         </div>
                         <div class="ReviewTxt_Bot_B_uli">
                             <ul class="list-unstyled d-flex justify-content-between">
-                                <li><img src="img/comment/20170508040625867.jpg" alt=""/></li>
-                                <li><img src="img/comment/20170508040646165.jpg" alt=""/></li>
-                                <li><img src="img/comment/20170508040705936.jpg" alt=""/></li>
-                                <li><img src="img/comment/20170508040731510.jpg" alt=""/></li>
-                                <li><img src="img/comment/20170508040756531.jpg" alt=""/></li>
-                                <li><img src="img/comment/20170508040828101.jpg" alt=""/></li>
-                                <li><img src="img/comment/20170508040904313.jpg" alt=""/></li>
+                                <li v-for=" p in item.img"><img :src="p" alt=""/></li>
                             </ul>
                         </div>
                     </div>

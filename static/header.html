@@ -3,10 +3,15 @@
         <div class="hd-top">
             <div><img src="img/img02.png" alt=""/></div>
             <div>
-                <ul id="isLogin">
+                <ul id="login" class="login">
                     <li><a href="login.html"><img src="img/img03.png" alt=""/>登录</a></li>
                     <li><a href="register.html"><img src="img/img04.png" alt=""/>注册</a></li>
                     <li><a href="contact.html"><img src="img/img05.png" alt=""/>联系我们</a></li>
+                </ul>
+                <ul id="loginOut" class="loginOut">
+                    <li><a href="javascript: void(0)"></a></li>
+                    <li><a href="javascript:void(0)" onclick="if(confirm('是否退出？'))loginOut()">退出</a></li>
+                    <li><a href="contact.html"><img src="img/img05.png" alt=""/>联系我们</a></a></li>
                 </ul>
                 <div><img src="img/img06.png" alt=""/></div>
             </div>
@@ -38,6 +43,28 @@
             </div>
         </div>
     </div>
+    <script>
+        var uid = localStorage.getItem("uid")
+        var uname = localStorage.getItem("uname")
+
+        var login = $("#login");
+        var loginOut = $("#loginOut");
+        var txt = $("#loginOut>li:nth-child(1)>a");
+        console.log(txt)
+        if(uname){
+            txt.html(`欢迎回来：${uname}`)
+            login.css("display","none")
+            loginOut.css("display","block")
+        }else{
+            login.css("display","block")
+            loginOut.css("display","none")
+        }
+     var loginOut = function(){
+            localStorage.removeItem("uname");
+            alert("退出成功");
+            location.href="index.html"
+        }
+    </script>
     <script src="js/prototype.js"></script>
     <script src="js/register.js"></script>
 </header>

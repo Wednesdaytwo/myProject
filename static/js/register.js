@@ -84,13 +84,19 @@ $(function(){
             dataType:"json",
             success:function(res){
                 if(res.code==1){
+                    var userData = res.obj.data[0];
+                    console.log(userData)
+                    var uid = userData.uid
+                    var uname = userData.uname
+                        localStorage.setItem("uid",uid)
+                        localStorage.setItem("uname",uname)
                     alert("登录成功")
                     location.href="index.html"
-
                 }else{
                     alert(res.msg)
                 }
             }
         })
     })
+
 })

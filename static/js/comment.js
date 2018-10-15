@@ -20,6 +20,20 @@ $(function () {
                         type: "get",
                         dataType: "json",
                         success: function (res) {
+                            for(var i=0;i<res.data.length;i++){
+                                var item = res.data[i]
+                                var id = item.id;
+                                var img = {};
+                                var k = 0;
+                                for(var j =0;j<res.img_data.length;j++){
+                                    var val = res.img_data[j]
+                                    if(val.cid==id){
+                                        img[k]=val.img_data;
+                                        k++
+                                    }
+                                }
+                                item.img=img
+                            }
                             vm.list = res.data
                         }
                     })
