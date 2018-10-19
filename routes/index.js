@@ -6,7 +6,7 @@ var router = express.Router();
 router.get("/",(req,res)=>{
         var obj={};
         (async function(){
-            var sql=`select id,title,subtitle,details,pic from zw_product`;
+            var sql=`select id,title,subtitle,details,url,thumb from zw_server`;
             await new Promise(function(open){
                 pool.query(sql,[],(err,result)=>{
                     if(err) throw err;

@@ -12,7 +12,12 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/vue.js"></script>
-
+    <style>
+        .scrollbox{width:100%}
+        .pic-list{overflow:hidden;border-bottom:solid 1px #fff;position:relative;}
+        .pic-list ul{position:absolute;left:0px;top:0px;}
+        .pic-list .picture{border-right:solid 1px #fff;position:relative;background:#eee;}
+    </style>
 </head>
 <body>
 <header id="header"></header>
@@ -26,11 +31,11 @@
                 <div v-for="p in server" class="col-md-6 col-sm-12 p-4">
                     <div>
                         <a :href="p.url">{{p.title}}</a>
-                        <a href="#">【查看视频】</a>
+                        <a :href="p.url">【查看视频】</a>
                     </div>
                     <div class="d-flex justify-content-around">
                         <div class="p-2 pl-4">
-                            <a :href="p.url"><img :src="p.pic" alt=""/></a>
+                            <a :href="p.url"><img :src="p.thumb" alt=""/></a>
                         </div>
                         <div>
                             <p class="pb-0 small p-2"><span>专业概述：</span> <span class="font-style">{{p.details}}</span>
@@ -83,29 +88,59 @@
                 </div>
             </div>
             <div class="p-4 text-center">
-                <a href="#"><img src="img/img22.png" alt="" class="w-100"/></a>
+                <a href="students.html"><img src="img/img22.png" alt="" class="w-100"/></a>
             </div>
         </div>
         <!--权威机构-->
         <div class="row border border-danger mt-4 mb-4" id="qwjg">
             <div class="col-md-1 p-0 m-0"><img src="img/img23.jpg" alt=""/></div>
             <div class="col-md-11 p-0 m-0">
-                <ul class="d-flex list-unstyled" id="de">
-                    <li class="" v-for="p in authority"><a :href="p.url"><img :src="p.pic" alt=""/></a></li>
+                <ul class="d-flex list-unstyled">
+                    <li v-for="p in authority"><a :href="p.url"><img :src="p.pic" alt=""/></a></li>
                 </ul>
             </div>
         </div>
         <!--环境介绍-->
         <div class="row environment">
             <div class="en-title">
-                <a href="#">查看更多>></a>
+                <a href="environment.html">查看更多>></a>
             </div>
             <div class="col-md-5 mt-4 lf">
                 <p>成都上善佳餐饮管理有限公司（上善佳美食培训），座落于世界文化遗产地、国家5A级景区四川省成都市都江堰青城山风景区,紧邻青城山山门。地理位置优越、交通便捷，学习环境优雅，公司于2013年正式注册，并开始全面专业培训成都特色美食、名小吃、川菜、火锅、等特色餐饮。依托在本行业积累数十年的餐饮技术、厨师资源，培训数百种四川本地特色的小吃、美食、火锅、川菜等。每种项目都拥有独特的秘方，这些项目在四川、乃至全国都证明拥有广阔的市场。我公司专注做创业培训和技术转让，帮助那些在进行餐饮创业过程中所遇到的技术及管理等问题进行专业指导。‍‍
-                    <a href="#">查看详情>></a></p>
+                    <a href="environment.html">查看详情>></a></p>
             </div>
             <div class="col-md-7 mt-4 lr">
-                <img src="img/hj_b3.jpg" alt=""/>
+                <div id="demo" class="carousel" data-ride="carousel">
+                    <!--指示器-->
+                    <ul class="carousel-indicators">
+                        <li data-target="#demo" data-slide-to="0" class="active"></li>
+                        <li data-target="#demo" data-slide-to="1"></li>
+                        <li data-target="#demo" data-slide-to="2"></li>
+                    </ul>
+                    <!--轮播图片-->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/hj_b3.jpg"/>
+                            <!--轮播图上提示文字-->
+                            <div class="carousel-caption"></div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/hj6.jpg"/>
+                            <div class="carousel-caption"></div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/hj13.jpg"/>
+                        </div>
+                    </div>
+                    <!--指示箭头-->
+                    <a href="#demo" class="carousel-control-prev" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a href="#demo" class="carousel-control-next" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+
+                </div>
             </div>
             <div class="w-100 mt-3" id="environment">
                 <img src="img/hover-prev.png" alt="" id="prev" class="disabled float-left"/>
@@ -118,11 +153,11 @@
             </div>
         </div>
         <!--友情链接 -->
-        <div class="link pt-3 pb-3">
+        <div class="link pt-3 pb-3 scrollbox">
             <div class="link-title"></div>
-            <div class="link-content p-4">
-                <ul class="list-unstyled d-flex justify-content-around">
-                    <li v-for="p in link"><a :href="p.url"><img :src="p.pic" alt=""/></a></li>
+            <div class="link-content p-4 pic-list">
+                <ul class="list-unstyled d-flex justify-content-around  wrap">
+                    <li v-for="p in link" class="picture"><a :href="p.url"><img :src="p.pic" alt=""/></a></li>
                 </ul>
             </div>
         </div>
@@ -131,6 +166,22 @@
 <script src="js/index.js"></script>
 <script src="js/header.js"></script>
 <script src="js/footer.js"></script>
-
+<script src="js/base.js"></script>
+<script src="js/scrollImg.js"></script>
+<script>
+    myAddEvent(window,'load',scrollImg);
+    function scrollImg(){
+        var aPicList=getByClass(document,'pic-list');
+        var i=0;
+        function next(){
+            if(i<aPicList.length){
+                new ScrollImg(aPicList[i]);
+                timer=setTimeout(next, 1000);
+            }
+            i++;
+        }
+        next();
+    }
+</script>
 </body>
 </html>

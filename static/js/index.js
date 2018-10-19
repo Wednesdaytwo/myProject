@@ -22,7 +22,7 @@ $(function(){
             //分页函数
             getdata(pno=0){
                 $.ajax({
-                    url: "http://localhost:8000/index/",
+                    url: "index/",
                     type: "get",
                     data: {pno},
                     dataType: "json",
@@ -38,6 +38,9 @@ $(function(){
                         vm.cur=parseInt(pno);
                     }
                 })
+            },
+            getList(id){
+                $.ajax
             }
         }
     })

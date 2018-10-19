@@ -1,0 +1,75 @@
+
+div.container>div.row>div:last-child>div:last-child div.PxxmList{
+    position: relative;
+    width: 99.8%;
+    min-height: 200px;
+    border: 1px solid #ff9302;
+    margin-top: 27px;
+    border-radius: 10px;
+}
+div.container>div.row>div:last-child>div:last-child div.PxxmList>div.PxxmListName{
+    position: absolute;
+    width: 125px;
+    height: 25px;
+    left: 50%;
+    margin-left: -62.5px;
+    top: -12.5px;
+    background: url(../img/pxxm/img49.png) no-repeat;
+    font-size: 12px;
+    color: #FFF;
+    text-align: center;
+    line-height: 25px;
+}
+.NyPxxmListClassName2{
+    width: 125px;
+    height: 25px;
+    left: 50%;
+    display: inline-block;
+    background: url(../img/pxxm/img58.png) no-repeat;
+    font-size: 12px;
+    color: #FFF;
+    text-align: center;
+    line-height: 25px;
+}
+div.container>div.row>div:last-child>div:last-child div.PxxmList>div.PxxmListPing{
+    padding:24px
+}
+div.container>div.row>div:last-child>div:last-child div.PxxmList>div.PxxmListPing ul li{
+    width:209px;
+    height: 237px;
+    border: 1px solid #ff9302;
+    background: #fbd087;
+    overflow: hidden;
+    padding: 11px;
+    float: left;
+    margin:0 9px 24px 0
+}
+div.container>div.row>div:last-child>div:last-child div.PxxmList>div.PxxmListPing ul li a{
+    text-decoration: none;
+}
+div.container>div.row>div:last-child>div:last-child div.PxxmList>div.PxxmListPing ul li div.NplTitle{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-family: "新宋体";
+    font-size: 12px;
+    color: #000000;
+    font-weight: bold;
+    overflow: hidden;
+}
+div.container>div.row>div:last-child>div:last-child div.PxxmList>div.PxxmListPing ul li div.NplInfo{
+    font-family: "新宋体";
+    line-height: 24px;
+    color: #3f3f3f;
+    font-size: 12px;
+}
+div.container>div.row>div:last-child>div:last-child div.PxxmList>div.PxxmListPing>div.NyPxxmMore{
+    width: 100%;
+    font-family: "新宋体";
+    font-size: 12px;
+    text-align: center;
+}
+div.container>div.row>div:last-child>div:last-child div.PxxmList>div.NyPxxmMore a{
+    color:#000000
+}

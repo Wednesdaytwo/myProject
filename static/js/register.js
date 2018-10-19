@@ -78,7 +78,7 @@ $(function(){
             return false;
         }
         $.ajax({
-            url:"http://localhost:8000/reg/login",
+            url:"reg/login",
             type:"post",
             data:`uname=${uname}&upwd=${upwd}`,
             dataType:"json",

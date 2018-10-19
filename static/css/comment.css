@@ -54,6 +54,7 @@ div.ReviewTxt>div.ReviewTxt_Top{
     text-indent: 9px;
     margin-bottom: 10px;
 }
+/*点评列表  start*/
 div.ReviewTxt>div.ReviewTxt_Bot{
     padding:15px 20px;
 }
@@ -72,3 +73,239 @@ div.ReviewTxt>div.ReviewTxt_Bot>div:last-child div.ReviewTxt_Bot_B div.ReviewTxt
     width: 145px;
     height: 115px;
 }
+/*点评列表  end*/
+/*点评添加  start*/
+div.reviewTheme>div:last-child>ul>li.reviewThemeTxt_E a{
+    display: block;
+    width: 144px;
+    height: 40px;
+    background: url(../img/img41.png) no-repeat;
+}
+/*quiz style*/
+.quiz{
+    border:solid 1px #ccc;
+    height:468px;
+}
+.quiz h3{
+    font-size:14px;
+    line-height:35px;
+    height:35px;
+    border-bottom:solid 1px #e8e8e8;
+    padding-left:20px;
+    background:#f8f8f8;
+    color:#666;
+    position:relative;
+}
+.quiz_content{
+    padding-top:10px;
+    padding-left:20px;
+    position:relative;
+    height:205px;
+}
+.quiz_content .btm{
+    border:none;
+    width:100px;
+    height:33px;
+    background:url(../img/comment/btn.gif) no-repeat;
+    margin:10px 0 0 64px;
+    display:inline;
+    cursor:pointer;
+}
+.quiz_content li.full-comment{
+    position:relative;
+    z-index:99;
+    height:41px;
+}
+.quiz_content li.cate_l{
+    height:24px;
+    line-height:24px;
+    padding-bottom:10px;
+}
+.quiz_content li.cate_l dl dt{
+    float:left;
+}
+.quiz_content li.cate_l dl dd{
+    float:left;
+    padding-right:15px;
+}
+.quiz_content li.cate_l dl dd label{
+    cursor:pointer;
+}
+.quiz_content .l_title{
+    height:50px;
+    position:relative;
+    padding-left:18px;
+}
+.quiz_content .l_title .title{
+    width:634px;
+    height:32px
+}
+.quiz_content .l_title .m_tit{
+    float:left;
+    width:88px;
+    line-height:35px
+}
+.quiz_content .l_text{
+    height:120px;
+    position:relative;
+    padding-left:18px;
+}
+.quiz_content .l_text .m_flo{
+    float:left;
+    width:88px;
+}
+.quiz_content .l_text .text{
+    width:634px;
+    height:109px;
+    border:solid 1px #ccc;
+}
+.quiz_content .l_text .tr{
+    color:red;
+    position:absolute;
+    bottom: -21px;
+    right: 268px;
+}
+/*goods-comm-stars style*/
+.goods-comm{
+    height:41px;
+    position:relative;
+    z-index:7;
+}
+.goods-comm-stars{
+    line-height:25px;
+    padding-left:12px;
+    height:41px;
+    position:absolute;
+    top:0;
+    left:8px;
+    width:400px;
+}
+.goods-comm-stars .star_l{
+    float:left;
+    margin-right:5px;
+    display:inline;
+}
+.goods-comm-stars .star_choose{
+    float:left;
+    display:inline-block;
+}
+.goods-score{
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 10px;
+}
+.goods-score ul li{
+    padding:5px 0 5px;
+}
+.goods-score ul li>ul.Fraction{
+    border-left: 1px solid #666666;
+    margin-left: 6px;
+}
+.goods-score ul li span:last-child{
+    line-height: 27px;
+    color:#999999;
+}
+.goods-score ul li>ul.Fraction>li.FractionA{
+    width: 22px;
+    height: 27px;
+    line-height: 20px;
+    text-align: center;
+    border: 1px solid #666666;
+    border-left: none;
+    font-size: 14px;
+    color: #333333;
+    background: #f4f4f4;
+    cursor: pointer;
+}
+.goods-score ul li>ul.Fraction>li.mColor{
+    background-color: rgb(246, 129, 14);
+    color: rgb(255, 255, 255);
+}
+/* rater star */
+.rater-star{
+    position:relative;
+    list-style:none;
+    margin:0;
+    padding:0;
+    background-repeat:repeat-x;
+    background-position:left top;
+    float:left;
+}
+.rater-star-item, .rater-star-item-current, .rater-star-item-hover{
+    position:absolute;
+    top:0;
+    left:0;
+    background-repeat:repeat-x;
+}
+.rater-star-item{
+    background-position: -100% -100%;
+}
+.rater-star-item-hover{
+    background-position:0 -48px;
+    cursor:pointer;
+}
+.rater-star-item-current{
+    background-position:0 -48px;
+    cursor:pointer;
+}
+.rater-star-item-current.rater-star-happy{
+    background-position:0 -25px;
+}
+.rater-star-item-hover.rater-star-happy{
+    background-position:0 -25px;
+}
+.rater-star-item-current.rater-star-full{
+    background-position:0 -72px;
+}
+/* popinfo */
+.popinfo{
+    display:none;
+    position:absolute;
+    top:30px;
+    background:url(../img/comment/infobox-bg.gif) no-repeat;
+    padding-top:8px;
+    width:192px;
+    margin-left:-14px;
+}
+.popinfo .info-box{
+    border:1px solid #f00;
+    border-top:0;
+    padding:0 5px;
+    color:#F60;
+    background:#FFF;
+}
+.popinfo .info-box div{
+    color:#333;
+}
+.rater-click-tips{
+    font:12px/25px;
+    color:#333;
+    margin-left:10px;
+    background:url(../img/comment/infobox-bg-l.gif) no-repeat 0 0;
+    width:125px;
+    height:34px;
+    padding-left:16px;
+    overflow:hidden;
+}
+.rater-click-tips span{
+    display:block;
+    background:#FFF9DD url(../img/comment/infobox-bg-l-r.gif) no-repeat 100% 0;
+    height:34px;
+    line-height:34px;
+    padding-right:5px;
+}
+.rater-star-item-tips{
+    background:url(../img/comment/star-tips.gif) no-repeat 0 0;
+    height:41px;
+    overflow:hidden;
+}
+.cur.rater-star-item-tips{
+    display:block;
+}
+.rater-star-result{
+    color:#FF6600;
+    font-weight:bold;
+    padding-left:10px;
+    float:left;
+}
+/*点评添加  end*/

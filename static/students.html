@@ -18,11 +18,11 @@
 
     <div class="env w-100 p-2 mb-3 mt-3">
         <div class="intro-title">
-            <span>您当前的位置：<a href="#">首页</a>><a href="#">教学环境</a>><a href="#">教学环境</a>></span>
-            教学环境
+            <span>您当前的位置：<a href="#">首页</a>><a href="#">学员风采</a>><a href="#">学员风采</a>></span>
+            学员风采
         </div>
         <ul class="list-unstyled" >
-            <li v-for="item in environment">
+            <li v-for="item in student">
                 <a :href="item.url"><img :src="item.pic" alt=""/></a>
                 <p v-html="item.title"></p>
             </li>

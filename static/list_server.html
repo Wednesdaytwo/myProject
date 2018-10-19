@@ -2,17 +2,36 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/list_server.css"/>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/vue.js"></script>
     <title></title>
 </head>
 <body>
 <header id="header"></header>
-
-
+<div class="container p-0">
+    <div class="listTxt">
+        <div class="listTxt_title">
+            <span>您当前的位置：<a href="#">首页</a>><a href="#">特色服务</a>></span>
+            特色服务
+        </div>
+        <div class="listTxt_content" id="list">
+            <div class="listTxt_content_head">{{data.title}}</div>
+            <div class="listTxt_content_body">
+                <p v-html="data.details"></p>
+                <p class="text-center p-2" v-for="item in imgs">
+                    <img :src="item.img" alt=""/>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 <footer id="footer"></footer>
 <script src="js/header.js"></script>
 <script src="js/footer.js"></script>
+<script src="js/list_server.js"></script>
 </body>
 </html>

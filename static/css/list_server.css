@@ -1,0 +1,46 @@
+div.listTxt{
+    width: 100%;
+    overflow-x: hidden;
+    background: #fff;
+    border: 1px solid #f7c11a;
+    margin:23px 0 23px;
+}
+div.listTxt>div.listTxt_title{
+    line-height: 39px;
+    padding: 0 9px;
+    border-bottom: 8px solid #f7c11a;
+    font-size: 18px;
+    color: #7a0004;
+    font-family: "微软雅黑";
+}
+div.listTxt>div.listTxt_title>span{
+    float: right;
+    color: #8a8a8a;
+    font-size: 12px;
+}
+div.listTxt>div.listTxt_title>span>a{
+    color: #8a8a8a;
+    text-decoration: none;
+}
+div.listTxt>div.listTxt_content{
+    width: 100%;
+    overflow-x: hidden;
+    padding: 15px;
+}
+div.listTxt>div.listTxt_content>div.listTxt_content_head{
+    width: 100%;
+    overflow-x: hidden;
+    text-align: center;
+    line-height: 35px;
+    border-bottom: 1px dashed #ccc;
+    font-family: "微软雅黑";
+    color: #ff6600;
+    font-size: 18px;
+}
+div.listTxt>div.listTxt_content>div.listTxt_content_body{
+    overflow-x: hidden;
+    padding: 0 10px;
+    line-height: 30px;
+    color: #666;
+    text-indent: 32px;
+}

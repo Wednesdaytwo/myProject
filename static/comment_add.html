@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/comment.css"/>
+    <link rel="stylesheet" href="css/commom.css"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/vue.js"></script>
+    <title></title>
+</head>
+<body>
+<header id="header"></header>
+<div class="container mt-3">
+    <div class="reviewTheme row mb-4">
+        <div class="col-md-3">
+            <img src="img/hj2.jpg" alt="" width="296" height="222"/>
+        </div>
+        <div class="col-md-9">
+            <ul class="list-unstyled ">
+                <li class="reviewThemeTxt_A p-2"><a href="index.html">上善佳餐饮管理有限公司</a></li>
+                <li class="reviewThemeTxt_B p-2">
+                        <span>
+                            <font>★</font>
+                            <font>★</font>
+                            <font>★</font>
+                            <font>★</font>
+                            <font>★</font>
+                        </span>
+                    <span class="fl">27条评论   |  服务：4  |  师资: 4  |  环境：4 |  口味：4</span>
+                </li>
+                <li class="reviewThemeTxt_C p-2">
+                    <p><span><strong>&nbsp;&nbsp;&nbsp;&nbsp;世界的美食&nbsp;&nbsp;中国的上善佳</strong></span></p>
+                    <p><span>真实，有效，实体店培训学习，亲身体验创业式培训。</span></p>
+                    <p><span>无需加盟费，完全获取成熟经验和全套核心技术！</span></p>
+                </li>
+                <li class="reviewThemeTxt_E p-2">
+                    <a href="javascript:void(0)"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="ReviewTxt" id="ReviewTxt">
+        <div class="ReviewTxt_Top">
+            发布点评
+        </div>
+        <div class="quiz">
+            <h3>我要评论</h3>
+            <div class="quiz_content">
+                <form>
+                    <div class="goods-comm">
+                        <div class="goods-comm-stars">
+                            <span class="star_l"><font class="MesColor">*</font>总体评价：</span>
+                            <div id="rate-comm-1" class="rate-comm"></div>
+                        </div>
+                    </div>
+                    <div class="goods-score">
+                        <ul class="list-unstyled" id="score">
+                            <li class="d-flex">
+                                <span><font class="MesColor">*</font>服&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;务：</span>
+                                <ul class="Fraction d-flex" id="server">
+                                    <li class="FractionA mColor" data-target="li-item">1</li>
+                                    <li class="FractionA" data-target="li-item">2</li>
+                                    <li class="FractionA" data-target="li-item">3</li>
+                                    <li class="FractionA" data-target="li-item">4</li>
+                                    <li class="FractionA" data-target="li-item">5</li>
+                                    <input type="hidden" id="serverVal"  value="1"/>
+                                </ul>
+                                <span class="ml-2 small">给服务打分</span>
+                            </li>
+                            <li class="d-flex">
+                                <span><font class="MesColor">*</font>师&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;资：</span>
+                                <ul class="Fraction d-flex" id="teacher">
+                                    <li class="FractionA mColor" data-target="li-item">1</li>
+                                    <li class="FractionA" data-target="li-item">2</li>
+                                    <li class="FractionA" data-target="li-item">3</li>
+                                    <li class="FractionA" data-target="li-item">4</li>
+                                    <li class="FractionA" data-target="li-item">5</li>
+                                    <input type="hidden" id="teacherVal" value="1"/>
+                                </ul>
+                                <span class="ml-2 small">给师资打分</span>
+                            </li>
+                            <li class="d-flex">
+                                <span><font class="MesColor">*</font>环&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;境：</span>
+                                <ul class="Fraction d-flex" id="environment">
+                                    <li class="FractionA mColor" data-target="li-item">1</li>
+                                    <li class="FractionA" data-target="li-item">2</li>
+                                    <li class="FractionA" data-target="li-item">3</li>
+                                    <li class="FractionA" data-target="li-item">4</li>
+                                    <li class="FractionA" data-target="li-item">5</li>
+                                    <input type="hidden" id="environmentVal" value="1"/>
+                                </ul>
+                                <span class="ml-2 small">给环境打分</span>
+                            </li>
+                            <li class="d-flex">
+                                <span><font class="MesColor">*</font>口&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;味：</span>
+                                <ul class="Fraction d-flex" id="taste">
+                                    <li class="FractionA mColor" data-target="li-item">1</li>
+                                    <li class="FractionA" data-target="li-item">2</li>
+                                    <li class="FractionA" data-target="li-item">3</li>
+                                    <li class="FractionA" data-target="li-item">4</li>
+                                    <li class="FractionA" data-target="li-item">5</li>
+                                    <input type="hidden" id="tasteVal" value="1"/>
+                                </ul>
+                                <span class="ml-2 small">给口味打分</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="l_title">
+                        <label class="m_tit"><font class="MesColor">*</font>所学项目：</label>
+                        <input type="text" name="m_title" id="m_title" class="title small" placeholder="请输入您所学的菜式名称">
+                    </div>
+                    <div class="l_text">
+                        <label class="m_flo"><font class="MesColor">*</font>内&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;容：</label>
+                        <textarea name="" id="" class="text small" placeholder="亲，在上善佳学习后，实实在在学到技术了吗，菜品口味如何，教学环境怎么样，服务满意吗？"></textarea>
+                        <span class="tr">注：不能发布含有电话、QQ、微信、网址等联系方式的内容，否则将被视作违规信息，网站管理员有权进行删贴.</span>
+                    </div>
+                    <input type="button" class="btn btn-primary" value="提交点评" name="dosubmit">
+                </form>
+            </div><!--quiz_content end-->
+        </div><!--quiz end-->
+    </div>
+</div>
+<footer id="footer"></footer>
+<script src="js/header.js"></script>
+<script src="js/footer.js"></script>
+<script src="js/comment.js"></script>
+<script src="js/commentAdd.js"></script>
+</body>
+</html>
