@@ -17,7 +17,7 @@ router.get("/",(req,res)=>{
                     open();
                 })
             });
-            var sql=`select id,title,pic from zw_student limit 6`;
+            var sql=`select id,title,url,pic from zw_student limit 6`;
             await new Promise(function(open){
                 pool.query(sql,[],(err,result)=>{
                     if(err) throw err;

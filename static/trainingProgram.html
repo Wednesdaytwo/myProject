@@ -67,18 +67,18 @@
                 <span>您当前的位置：<a href="#">首页</a>><a href="#">培训项目</a>></span>
                 培训项目
             </div>
-            <div class="intro-content p-3">
-                <div class="PxxmList">
-                    <div class="PxxmListName">精品川味专业</div>
+            <div class="intro-content p-3" id="pxxmList">
+                <div class="PxxmList"  v-for="fitem in familyInfo" >
+                    <div class="PxxmListName">{{fitem.pname}}</div>
                     <p style="text-align: center;padding:30px 0 0 0;">
-                        <a href="/index.php?m=content&amp;c=index&amp;a=lists&amp;catid=67" class="NyPxxmListClassName2">【查看视频】</a>
+                        <a href="javascript:void(0)" class="NyPxxmListClassName2">【查看视频】</a>
                     </p>
-                    <div class="PxxmListPing" id="pxxmList">
+                    <div class="PxxmListPing" >
                         <ul>
-                            <li v-for="item in list">
+                            <li v-for="item in list" v-if="item.family_id==fitem.pid">
                                 <a href="#">
                                     <img :src="item.img" width="186" height="140">
-                                    <div class="NplTitle">{{item.title}}}</div>
+                                    <div class="NplTitle">{{item.title}}</div>
                                     <div class="NplInfo">{{item.info}}</div>
                                 </a>
                             </li>

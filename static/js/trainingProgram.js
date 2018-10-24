@@ -8,6 +8,7 @@ $(function () {
         data:function(){
             return{
                 list:[],
+                familyInfo:[]
             }
         },
         created(){
@@ -20,7 +21,8 @@ $(function () {
                     type: "get",
                     dataType: "json",
                     success: function (res) {
-                        vm.list = res;
+                        vm.list = res.data;
+                        vm.familyInfo = res.family;
                     }
                 })
             }
